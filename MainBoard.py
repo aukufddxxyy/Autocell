@@ -55,8 +55,6 @@ class Board(QFrame):
 
     def start(self):
         self.msg2_status_bar.emit(str(self.time_passed))
-
-        # self.new_map(self.time_passed)
         self.timer.start(config.speed, self)
 
     def pause(self, pressed):
@@ -78,19 +76,6 @@ class Board(QFrame):
 
         self.set_status(self.time_passed)
         self.update()
-
-        # if not self.try_move(self.cur_map):
-        #     self.timer.stop()
-        #     self.isStarted = False
-        #     self.msg2_status_bar.emit("Game over")
-
-    # def try_move(self, new_map):
-    #
-    #     self.cur_map = new_map
-    #     self.set_status(self.time_passed)
-    #     self.update()
-    #
-    #     return True
 
     def paintEvent(self, event):
         # print('done %s' % event.timerId())
@@ -173,7 +158,6 @@ class Board(QFrame):
             self.isLoaded = True
         else:
             self.isLoaded = False
-        # return
 
 
 
