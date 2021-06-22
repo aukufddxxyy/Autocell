@@ -159,5 +159,8 @@ class Board(QFrame):
         else:
             self.isLoaded = False
 
-
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    demo = Board()
+    sys.exit(app.exec_())
 

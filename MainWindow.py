@@ -13,9 +13,9 @@ class AutoCell(QMainWindow):
         super().__init__()
 
         self.main_board = Board(self)
-        self.custom_check = QCheckBox('is customize', self)
-        self.pause_button = QPushButton('start', self)
-        self.reset_button = QPushButton('reset', self)
+        self.custom_check = QCheckBox('自定义', self)
+        self.pause_button = QPushButton('开始', self)
+        self.reset_button = QPushButton('重启', self)
         self.map_combo = QComboBox(self)
         self.status_bar = self.statusBar()
 
@@ -50,9 +50,9 @@ class AutoCell(QMainWindow):
 
     def pause(self, pressed):
         if pressed:
-            self.pause_button.setText('pause')
+            self.pause_button.setText('暂停')
         else:
-            self.pause_button.setText('start')
+            self.pause_button.setText('开始')
 
     def center(self):
         qr = self.frameGeometry()
